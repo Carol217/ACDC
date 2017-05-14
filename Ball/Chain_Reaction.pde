@@ -1,5 +1,6 @@
 class Chain_Reaction {
   Ball[] balls;
+  boolean reactionStarted;
 
   void setup() {
     size(600,600);
@@ -12,7 +13,7 @@ class Chain_Reaction {
   void draw() {
     background(0);
     for (int i = 0; i < balls.length; i++) {
-      move();
+      balls[i].move();
     }
   }
 
