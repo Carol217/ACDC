@@ -1,4 +1,4 @@
-class Ball {
+ class Ball {
   float x;
   float y;
   float rad;
@@ -28,6 +28,11 @@ class Ball {
     background(0);  
     move();
   }
+  
+  void drawMe() {
+    move();
+    ellipse (x , y, rad, rad);
+  }
 
   void move() {
     x = x + dx;
@@ -36,9 +41,9 @@ class Ball {
   }
 
   void bounce() {
-    if (y >= height)
+    if (y >= height || y <= 0)
       dy = -dy;
-    if (x >= width)
+    if (x >= width || x <= 0)
       dx = -dx;
   }
 }
