@@ -13,7 +13,7 @@ class Chain_Reaction {
   void draw() {
     background(0);
     for (int i = 0; i < balls.length; i++) {
-      balls[i].move();
+      balls[i].drawMe();
     }
   }
 
